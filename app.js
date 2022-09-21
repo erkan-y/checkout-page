@@ -50,7 +50,7 @@ items.addEventListener("click", function (e) {
     Number(shoesCounter.textContent) * 74.99 +
     Number(bagCounter.textContent) * 54.99;
   let tax = Number(((sub * 18) / 100).toFixed(2));
-  let ship = 19;
+  let ship = sub > 0 ? 19 : 0;
   let sum = (sub + tax + ship).toFixed(2);
 
   subTotal.textContent = sub;
