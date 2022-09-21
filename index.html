@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <div class="container">
+<section class="form">
+      <h2>Contact Information</h2>
+      <div class="input">
+        <label for="mail">E-mail</label><br />
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="✉  Enter your email..."
+          required
+        />
+      </div>
+      <div class="input">
+        <label for="phone">Phone</label><br />
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="☎  Enter your phone..."
+          required
+        />
+      </div>
+      <h2>Shipping Address</h2>
+      <div class="input">
+        <label for="name">Name</label><br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="👤  Enter your full name..."
+          required
+        />
+      </div>
+      <div class="input">
+        <label for="address">Address</label><br />
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="🏠  Enter your address..."
+          required
+        />
+      </div>
+      <div class="input">
+        <label for="city">City</label><br />
+        <input
+          type="text"
+          name="city"
+          id="city"
+          placeholder="🏦  Enter your city..."
+          required
+        />
+      </div>
+      <div class="bottom input">
+        <div>
+          <label for="country">Country</label> <br />
+          <select name="country" id="country">
+            <option value="Turkey">Turkey</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="postcode">Post Code</label><br />
+          <input
+            type="text"
+            name="postcode"
+            id="postcode"
+            pattern="[0-9]{5}"
+            placeholder="📬 Enter your postal code..."
+          />
+        </div>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="remember" id="remember" />
+        <label for="remember">See this information next time</label>
+      </div>
+    </section>
+    <section class="items">
+      <div class="item item1">
+        <img src="./img/photo1.png" alt="backbag" />
+        <div class="item-info">
+          <h3>Vintage Backbag</h3>
+          <p class="price">$54.99<span class="old-price">$94.99</span></p>
+          <div class="count bag-order">
+            <i class="fa-solid fa-square-minus fa-2x minus"></i>
+            <span class="bag-counter">0</span>
+            <i class="fa-solid fa-square-plus fa-2x plus"></i>
+          </div>
+        </div>
+      </div>
+            <div class="item item2">
+        <img src="./img/photo2.png" alt="backbag" />
+        <div class="item-info">
+          <h3>Levi Shoes</h3>
+          <p class="price">$74.99<span class="old-price">$124.99</span></p>
+          <div class="count shoe-order">
+            <i class="fa-solid fa-square-minus fa-2x minus"></i>
+            <span class="shoes-counter">0</span>
+            <i class="fa-solid fa-square-plus fa-2x plus"></i>
+          </div>
+        </div>
+      </div>
+      <div class="total-container">
+        <div class="total-field">
+          <p>Subtotal $ </p> <p><span id="sub-total" >0</span></p>
+        </div>
+        <div class="total-field">
+          <p>Tax (18%) $ </p> <p><span id="tax-total" >0</span></p>
+        </div>
+        <div class="total-field">
+          <p>Shipping $ </p> <p><span id="shipping-total" >0</span></p>
+        </div>
+        <div class="total-field">
+          <p>Total $ </p> <p><span id="total" >0</span></p>
+        </div>
+      </div>
+    
+    </section>
+    <script src="app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
